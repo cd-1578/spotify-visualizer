@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="spotify()">
+    <mat-icon svgIcon="spotify-outlined"></mat-icon>
+  </button>
+  <span><span class="spotify">Spotify </span>Visualizer</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/home">Home</button>
+  <span class="spacer-related"></span>
+  <button mat-button routerLink="/analytics">Analytics</button>
+  <span class="spacer-left"></span>
+  <button mat-icon-button>
+    <!-- TODO: (click)="account()" -->
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>
