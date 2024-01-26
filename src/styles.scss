@@ -2,50 +2,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-// $spotify-visualizer-primary: mat.define-palette(mat.$indigo-palette);
-
-$spotify-visualizer-secondary: mat.define-palette(mat.$gray-palette, 900, 300, 700);
-$spotify-visualizer-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-
-// The warn palette is optional (defaults to red).
-$spotify-visualizer-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-// $spotify-visualizer-theme: mat.define-light-theme((
-//   color: (
-//     primary: $spotify-visualizer-primary,
-//     accent: $spotify-visualizer-accent,
-//     warn: $spotify-visualizer-warn,
-//   )
-// ));
-
-$spotify-visualizer-theme: mat.define-dark-theme((
-  color: (
-    primary: $spotify-visualizer-secondary,
-    accent: $spotify-visualizer-accent,
-    warn: $spotify-visualizer-warn,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($spotify-visualizer-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
 @font-face {
   font-family: 'CircularMedium';
   src: url('./assets/fonts/Circular/CircularStd-Medium.otf') format('truetype');
@@ -60,6 +16,38 @@ $spotify-visualizer-theme: mat.define-dark-theme((
   font-family: 'CircularBold';
   src: url('./assets/fonts/Circular/CircularStd-Bold.otf') format('truetype');
 }
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+$spotify-visualizer-primary: mat.define-palette(mat.$gray-palette, 900, 900, 900);
+$spotify-visualizer-secondary: mat.define-palette(mat.$gray-palette, 100, 100, 100);
+$spotify-visualizer-accent: mat.define-palette(mat.$pink-palette, A200, A100, A100);
+
+// // The warn palette is optional (defaults to red).
+$spotify-visualizer-warn: mat.define-palette(mat.$red-palette);
+
+$spotify-visualizer-theme: mat.define-dark-theme((
+  color: (
+    primary: $spotify-visualizer-primary,
+    accent: $spotify-visualizer-accent,
+    warn: $spotify-visualizer-secondary,
+  ),
+));
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+@include mat.all-component-themes($spotify-visualizer-theme);
+/* You can add global styles to this file, and also import other style files */
+
+
 
 html, body { 
   height: 100%; 
@@ -67,12 +55,12 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body { margin: 0; font-family: CircularMedium}
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, a, mat-label {
   margin: 0px;
   padding: 0px;
-  color: black;
 }

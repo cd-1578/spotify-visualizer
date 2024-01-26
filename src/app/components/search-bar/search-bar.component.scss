@@ -1,0 +1,28 @@
+.search-bar-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    border-radius: 16px;
+    width: 30vw;
+    
+    .spacer-outer {
+        width: 16px;
+        height: 100%;
+    }
+
+    .spacer-inner {
+        width: 8px;
+        height: 100%;
+    }
+
+    .search-bar {
+        border: none;
+        font-size: 16px;
+        border-radius: 8px;
+        width: 100%;
+        flex-grow: 1;
+        outline: none;
+    }
+}
